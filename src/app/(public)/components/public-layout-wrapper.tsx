@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-// import NavBar from "./NavBar";
+import NavBar from "./global/Navbar";
 // import Footer from "./Footer";
 
 const AUTH_ROUTES = [
@@ -22,7 +22,7 @@ const LayoutWrapper = ({ children }: { children: React.ReactNode }) => {
   } else {
     return (
       <div className="bg-background w-full">
-        {/* <NavBar /> */}
+        <NavBar />
         {children}
         {/* <Footer /> */}
       </div>

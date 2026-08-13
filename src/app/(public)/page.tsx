@@ -6,7 +6,13 @@ const LandingPage = () => {
     <>
       <main className="bg-background text-foreground">
         {/* <Hero /> */}
-        <h2>home page</h2>
+        <section className="min-h-[80vh] h-full">
+          <div className="flex flex-col items-center justify-center gap-6 min-h-[80vh]">
+            <h1 className="text-4xl font-bold">🚀 Coming Soon</h1>
+            <h3 className="text-xl font-medium text-gray-500">🔧 Under Development</h3>
+            <p className="text-lg text-gray-600">We're building something exceptional. Stay tuned!</p>
+          </div>
+        </section>
       </main>
     </>
   )
