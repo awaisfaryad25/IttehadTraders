@@ -1,5 +1,6 @@
-// export { default as Logo1 } from "./logo/dc.svg";
-// export { default as Logo } from "./logo/LogoDC.svg";
+// Logo img/svg
+export { default as Logo } from "./logo/IttehadLogo.svg";
+export { default as LogoIT } from "./logo/LogoIT.svg";
 
 // Profile Page Img
 
