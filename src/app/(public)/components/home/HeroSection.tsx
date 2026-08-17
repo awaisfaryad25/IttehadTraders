@@ -99,7 +99,7 @@ const HeroSection = () => {
             <FloatingProduct
               src={AluminumTray}
               alt="Disposable glass"
-              className="right-[10%] bottom-[10%] w-28 lg:w-40"
+              className="right-[10%] bottom-10 lg:bottom-0 w-28 lg:w-40"
               rot="5deg"
               delay="1.1s"
             />
@@ -113,7 +113,7 @@ const HeroSection = () => {
             <FloatingProduct
               src={PlasticBoxs}
               alt="Takeaway food box"
-              className="right-[50%] bottom-[5%] w-32 lg:w-44"
+              className="right-[55%] bottom-[5%] lg:-bottom-8 w-32 lg:w-44"
               rot="-3deg"
               delay="2.1s"
             />
