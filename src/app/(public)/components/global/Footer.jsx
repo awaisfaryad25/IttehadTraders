@@ -26,7 +26,7 @@ const footerLinks = {
 
 const Footer = () => {
   return (
-    <footer className="bg-muted/40 border-t border-border px-6 pt-16 pb-6">
+    <footer className="bg-muted/40 border-t border-border px-6 lg:px-8 pt-16 pb-6">
       <div className="w-full max-w-7xl mx-auto">
         <div className="grid gap-12 md:grid-cols-5">
           {/* Brand */}

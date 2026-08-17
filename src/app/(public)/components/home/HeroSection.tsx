@@ -1,12 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import {
-  ContainerIcon,
-  GlassIcon,
-  CupIcon,
-  BagIcon,
-  BoxIcon,
-} from "./icons/PackagingIcons";
 import Image, { StaticImageData } from "next/image";
 import { AluminumTray, GlassCup, FoodPacks, PlasticBoxs } from "@/assets";
 
@@ -18,16 +11,8 @@ function FloatingTag({ children }: { children: React.ReactNode }) {
   );
 }
 
-function FloatingTagItem({
-  children,
-  className,
-  rot,
-  delay,
-}: {
-  children: React.ReactNode;
-  className: string;
-  rot: string;
-  delay: string;
+function FloatingTagItem({ children, className, rot, delay,
+}: { children: React.ReactNode; className: string; rot: string; delay: string;
 }) {
   return (
     <div
@@ -39,13 +24,7 @@ function FloatingTagItem({
   );
 }
 
-function FloatingProduct({
-  src,
-  alt,
-  className,
-  rot,
-  delay,
-}: {
+function FloatingProduct({ src, alt, className, rot, delay, }: {
   src: string | StaticImageData;
   alt: string;
   className: string;
@@ -74,7 +53,7 @@ const HeroSection = () => {
       <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-onyx/5 blur-3xl" />
       <div className="pointer-events-none absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-gold/10 blur-3xl" />
 
-      <div className="relative mx-auto max-w-7xl px-6 py-24 lg:px-0 md:py-32">
+      <div className="relative mx-auto max-w-7xl px-6 lg:px-8 2xl:px-0 py-20 md:py-24 lg:py-32 2xl:py-36">
         <div className="grid lg:grid-cols-2 gap-6">
           <div className="">
             <div className="inline-flex items-center gap-2 rounded-full border border-hairline bg-white px-4 py-1.5">
@@ -84,17 +63,17 @@ const HeroSection = () => {
               </span>
             </div>
 
-            <h1 className="mt-8 max-w-2xl font-heading text-4xl font-extrabold leading-[1.15] tracking-tight text-onyx md:text-6xl">
-              Packaging that keeps up with your kitchen.
+            <h1 className="mt-4 lg:mt-8 max-w-2xl font-heading text-4xl font-bold leading-[1.15] tracking-tight text-onyx md:text-6xl">
+              Packaging That <span className="text-gold italic">Keeps</span> Up With Your <span className="text-gold italic">Kitchen.</span>
             </h1>
 
-            <p className="mt-6 max-w-xl font-text text-lg leading-relaxed text-charcoal">
+            <p className="mt-4 max-w-xl font-text text-sm leading-relaxed text-charcoal">
               Ittehad Traderz supplies disposable containers, cups, glasses and
               packaging in bulk — so your kitchen never runs short and never
               overpays.
             </p>
 
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-6 lg:mt-10 flex flex-wrap gap-4">
               <Link
                 href="/products"
                 className="rounded-lg bg-onyx px-7 py-3.5 font-text text-sm font-semibold text-white transition-colors hover:bg-onyxsoft"
@@ -139,18 +118,26 @@ const HeroSection = () => {
               delay="2.1s"
             />
             <FloatingTagItem
-              className="right-[35%] top-[32%]"
+              className="right-[45%] top-[10%] lg:right-[35%] lg:top-[25%]"
               rot="-3deg"
               delay="0.4s"
             >
               Food-Safe
             </FloatingTagItem>
             <FloatingTagItem
-              className="right-[25%] top-[55%]"
+              className="right-[65%] top-[55%]"
               rot="4deg"
               delay="1.8s"
             >
               Bulk Ready
+            </FloatingTagItem>
+            
+             <FloatingTagItem
+              className="right-0 lg:-right-20 top-[45%]"
+              rot="-20deg"
+              delay="2s"
+            >
+              Food Grade Certified
             </FloatingTagItem>
           </div>
         </div>
