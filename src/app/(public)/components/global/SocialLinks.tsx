@@ -33,7 +33,7 @@ const SocialLinks = () => {
           <FaLinkedinIn />
         </a>
         <a
-          href="https:/facebook.com"
+          href="https:/facebook.com/ittehadtraderz"
           target="_blank"
           rel="noopener noreferrer"
           className="text-muted-foreground hover:text-[#0866ff]"
