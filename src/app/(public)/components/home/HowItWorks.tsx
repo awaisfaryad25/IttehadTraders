@@ -50,7 +50,7 @@ const HowItWorks = () => {
 
         <div className="mt-16 grid grid-cols-1 gap-5 lg:gap-6 md:grid-cols-3">
           {steps.map((step, i) => (
-            <div key={step.number} className="relative bg-white p-4 md:p-6 rounded-2xl text-start">
+            <div key={step.number} className="relative bg-white p-4 md:p-6 rounded-2xl text-start border border-gold/30 shadow hover:shadow-xl hover:-translate-y-2 transition-all duration-300 ease-in-out">
               <div className="flex items-center justify-between gap-4">
                 <span className={`${step.iconBoxColor} p-3 xl:p-3.5 rounded-lg xl:rounded-xl`}>
                   <step.icon className="size-5 xl:size-6.5 text-white" />

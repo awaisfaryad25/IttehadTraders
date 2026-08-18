@@ -67,10 +67,9 @@ const HeroSection = () => {
               Packaging That <span className="text-gold italic">Keeps</span> Up With Your <span className="text-gold italic">Kitchen.</span>
             </h1>
 
-            <p className="mt-4 max-w-xl font-text text-sm leading-relaxed text-charcoal">
-              Ittehad Traderz supplies disposable containers, cups, glasses and
-              packaging in bulk — so your kitchen never runs short and never
-              overpays.
+            <p className="mt-4 max-w-2xl font-text text-sm 2xl:text-base leading-relaxed text-charcoal">
+              Ittehad Traderz supplies disposable containers, cups, glasses and packaging in bulk — so your kitchen never runs short and never overpays. 
+              We know what it's like when the rush hits and you're down to your last takeout box. That's why we stock everything from 4oz sauce cups to 32oz meal containers, always ready to ship.
             </p>
 
             <div className="mt-6 lg:mt-10 flex flex-wrap gap-4">
