@@ -92,7 +92,7 @@ const ProductRange = () => {
           ))}
         </div> */}
 
-        <div className="mt-12 2xl:mt-16 grid md:grid-cols-2 lg:grid-cols-7 grid-rows-6 gap-4 lg:gap-6">
+        <div className="mt-12 2xl:mt-16 grid md:grid-cols-2 lg:grid-cols-7 grid-rows-2 gap-4 lg:gap-6">
           <BentoImageCard
             image={CraftItems}
             alt="Karahi containers and takeaway boxes"
@@ -137,6 +137,15 @@ const ProductRange = () => {
             href="/products#bags-wrap"
             className="lg:col-span-2 lg:col-start-6lg: row-start-2 min-h-60"
           />
+        </div>
+
+        <div className="mt-12">
+          <Link href="" className="group px-6 py-3 2xl:py-3.5 text-onyx font-medium bg-gold rounded-xl flex items-center gap-2 w-fit mx-auto shadow-md hover:shadow-xl">
+            View All Categories
+            <span className=" flex size-7 items-center justify-center rounded-full p-1 transition-transform duration-300 group-hover:rotate-45 group-hover:bg-white/15">
+          <ArrowUpRight className="size-4" />
+        </span>
+          </Link>
         </div>
       </div>
     </section>
