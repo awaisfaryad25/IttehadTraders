@@ -1,4 +1,5 @@
 import HeroSection from "./components/home/HeroSection"
+import HowItWorks from "./components/home/HowItWorks"
 import ProductRange from "./components/home/ProductRange"
 import ProductsMarquee from "./components/home/ProductsMarquee"
 import TrustedBy from "./components/home/TrustedBy"
@@ -14,6 +15,7 @@ const LandingPage = () => {
         <TrustedBy/>
         <ProductsMarquee/>
         <ProductRange />
+        <HowItWorks />
         
         <section className="min-h-[80vh] h-full px-6">
           <div className="flex flex-col items-center justify-center gap-6 min-h-[80vh] text-center">

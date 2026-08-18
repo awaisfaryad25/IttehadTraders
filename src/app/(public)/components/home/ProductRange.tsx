@@ -55,13 +55,13 @@ const ProductRange = () => {
       <div className="mx-auto w-full max-w-7xl text-center">
         <div className="mx-auto max-w-lg text-center">
           <div className="flex items-center justify-center gap-3">
-    <div className="h-px w-8 bg-gold"></div>
-    <p className="font-text text-xs font-bold uppercase tracking-widest text-gold">
-      Our Product Range
-    </p>
-    {/* <div className="h-px w-12 bg-gold/40"></div> */}
+            <div className="h-px w-8 bg-gold"></div>
+            <p className="font-text text-xs font-bold uppercase tracking-widest text-gold">
+              Our Product Range
+            </p>
+            {/* <div className="h-px w-12 bg-gold/40"></div> */}
           </div>
-          <h2 className="mt-3 font-heading text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight text-onyx md:text-4xl">
+          <h2 className="mt-3 font-heading text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight text-onyx">
             Browse  <span className="text-gold">By Category</span>
           </h2>
           <p className="mt-4 font-medium text-stone">
