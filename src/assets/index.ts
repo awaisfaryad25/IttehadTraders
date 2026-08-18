@@ -14,4 +14,5 @@ export { default as FoodPacks } from "./home/food-pack.png";
 export { default as PlasticBoxs } from "./home/plastic-boxs.png";
 
 // 
+export { default as CraftItems } from "./products/craft-item.png";
 

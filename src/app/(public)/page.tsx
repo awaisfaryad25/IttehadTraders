@@ -1,4 +1,5 @@
 import HeroSection from "./components/home/HeroSection"
+import ProductRange from "./components/home/ProductRange"
 import ProductsMarquee from "./components/home/ProductsMarquee"
 import TrustedBy from "./components/home/TrustedBy"
 
@@ -12,6 +13,7 @@ const LandingPage = () => {
         <HeroSection/>
         <TrustedBy/>
         <ProductsMarquee/>
+        <ProductRange />
         
         <section className="min-h-[80vh] h-full px-6">
           <div className="flex flex-col items-center justify-center gap-6 min-h-[80vh] text-center">
@@ -22,7 +24,6 @@ const LandingPage = () => {
         </section>
       </main>
       {/* <Hero />
-      <ProductRange />
       <HowItWorks />
       <FeaturedProducts />
       <Solutions />
