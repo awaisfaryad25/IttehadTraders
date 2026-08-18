@@ -3,7 +3,7 @@ import Link from "next/link";
 import { categories } from "@/lib/products";
 import Image, { StaticImageData } from "next/image";
 import { CraftItems, } from "@/assets";
-import { ArrowUpRight, Boxes } from "lucide-react";
+import { ArrowUpRight, } from "lucide-react";
 
 const totalVariants = categories.reduce(
   (sum, c) => sum + c.items.reduce((s, i) => s + i.sizes.length, 0),
@@ -51,18 +51,21 @@ function BentoImageCard({ image, alt, title, count, href, className, }: {
 
 const ProductRange = () => {
   return (
-    <section className="bg-white px-6 py-12 md:py-16 lg:px-8 lg:py-20 2xl:py-24">
+    <section className="bg-white px-6 py-12 md:py-16 lg:px-8 lg:py-20 2xl:py-28">
       <div className="mx-auto w-full max-w-7xl text-center">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="font-text text-xs font-semibold uppercase tracking-widest text-gold">
-            Our Product Range
-          </p>
-          <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-onyx md:text-4xl">
-            Browse By Category
+        <div className="mx-auto max-w-lg text-center">
+          <div className="flex items-center justify-center gap-3">
+    <div className="h-px w-8 bg-gold"></div>
+    <p className="font-text text-xs font-bold uppercase tracking-widest text-gold">
+      Our Product Range
+    </p>
+    {/* <div className="h-px w-12 bg-gold/40"></div> */}
+          </div>
+          <h2 className="mt-3 font-heading text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight text-onyx md:text-4xl">
+            Browse  <span className="text-gold">By Category</span>
           </h2>
-          <p className="mt-4 font-text text-stone">
-            From karahi containers to cling film — everything your kitchen
-            packs, wraps, and serves with, sorted so you find it fast.
+          <p className="mt-4 font-medium text-stone">
+            From karahi containers to cling film — everything your kitchen packs, wraps, and serves with, sorted so you find it fast.
           </p>
         </div>
 
