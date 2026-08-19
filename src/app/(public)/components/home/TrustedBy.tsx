@@ -21,7 +21,7 @@ const TrustedBy = () => {
         <div className="mt-8 flex flex-wrap items-start justify-center gap-x-10 gap-y-6">
           {segments.map(({ label, icon: Icon }) => (
             <div key={label} className="group flex flex-col items-center gap-2.5">
-              <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-ivor bg-white group-hover:bg-gold ">
+              <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-ivor bg-white group-hover:bg-gold shadow-md">
                 <Icon className="size-6 text-gold group-hover:text-white" strokeWidth={1.75} />
               </span>
               <span className="font-text text-xs lg:text-sm font-medium text-charcoal">

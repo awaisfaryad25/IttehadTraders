@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import MainLogo from "./MainLogo";
+import { ShoppingBag } from "lucide-react";
 
 const NavBar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -31,7 +32,7 @@ const NavBar = () => {
     { label: "Products", href: "/products" },
     { label: "Solutions", href: "/solutions" },
     { label: "Blog", href: "/blog" },
-    // { label: "Contact Us", href: "/contact" },
+    { label: "Contact Us", href: "/contact" },
   ];
 
   return (
@@ -75,8 +76,9 @@ const NavBar = () => {
             </button>
 
             <div className="hidden md:flex items-center space-x-2">
-              <Link href="/contact" className="bg-linear-to-r from-[#FFDB70] to-[#FFBB5C] px-5 py-2.5 font-semibold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-200">
-                Contact Us
+              <Link href="/" className="bg-linear-to-r from-[#FFDB70] to-[#FFBB5C] px-5 py-2.5 font-semibold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-200 flex items-center gap-2">
+                <ShoppingBag className="size-5"/>
+                Inquiry Bag
               </Link>
             </div>
           </div>

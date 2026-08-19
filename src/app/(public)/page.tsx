@@ -16,7 +16,7 @@ const LandingPage = () => {
         <ProductsMarquee/>
         <ProductRange />
         <HowItWorks />
-        
+
         <section className="min-h-[80vh] h-full px-6">
           <div className="flex flex-col items-center justify-center gap-6 min-h-[80vh] text-center">
             <h1 className="text-4xl font-bold text-[#FFBB5C]">🚀 Coming Soon</h1>
@@ -26,7 +26,6 @@ const LandingPage = () => {
         </section>
       </main>
       {/* <Hero />
-      <HowItWorks />
       <FeaturedProducts />
       <Solutions />
       <Testimonials />

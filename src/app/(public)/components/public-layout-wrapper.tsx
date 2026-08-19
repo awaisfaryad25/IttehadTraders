@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation";
 import NavBar from "./global/Navbar";
 import Footer from "./global/Footer";
+import WhatsAppFloat from "./whatsapp/WhatsAppFloat";
 
 const AUTH_ROUTES = [
   "/login",
@@ -24,6 +25,7 @@ const LayoutWrapper = ({ children }: { children: React.ReactNode }) => {
       <div className="bg-background w-full">
         <NavBar />
         {children}
+        <WhatsAppFloat />
         <Footer />
       </div>
     );
