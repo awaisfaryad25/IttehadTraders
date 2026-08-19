@@ -1,46 +1,28 @@
 import { FaGithub, FaLinkedinIn, FaXTwitter, FaFacebookF, } from "react-icons/fa6";
 
+const socialLinks = [
+  { icon: FaXTwitter, href: "https://twitter.com", label: "Twitter" },
+  { icon: FaGithub, href: "https://github.com", label: "GitHub" },
+  { icon: FaLinkedinIn, href: "https://linkedin.com", label: "LinkedIn" },
+  { icon: FaFacebookF, href: "https://facebook.com/ittehadtraderz", label: "Facebook" },
+];
+
 const SocialLinks = () => {
   return (
     <div>
       <div className=" flex items-center gap-4">
-        <a
-          href="https://twitter.com"
+        {socialLinks.map(({ icon: Icon, href, label }) => (
+          <a           key={label}
+          href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-muted-foreground hover:text-foreground"
-          aria-label="Twitter"
-        >
-          <FaXTwitter />
-        </a>
+          aria-label={label}
+          className="flex size-9 items-center justify-center rounded-full border border-hairline text-charcoal transition-colors hover:border-gold hover:bg-gold hover:text-white"
+          >
+            <Icon className="size-4" />
+          </a>
+        ) )}
 
-        <a
-          href="https://github.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-muted-foreground hover:text-foreground"
-          aria-label="GitHub"
-        >
-          <FaGithub />
-        </a>
-        <a
-          href="https://linkedin.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-muted-foreground hover:text-[#0a66c2]"
-          aria-label="LinkedIn"
-        >
-          <FaLinkedinIn />
-        </a>
-        <a
-          href="https:/facebook.com/ittehadtraderz"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-muted-foreground hover:text-[#0866ff]"
-          aria-label="LinkedIn"
-        >
-          <FaFacebookF />
-        </a>
       </div>
     </div>
   );

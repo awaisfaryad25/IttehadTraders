@@ -10,7 +10,6 @@ const LandingPage = () => {
   return (
     <>
       <main className="bg-background text-foreground">
-        {/* <Hero /> */}
         <HeroSection/>
         <TrustedBy/>
         <ProductsMarquee/>
