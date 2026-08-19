@@ -3,7 +3,9 @@ import HeroSection from "./components/home/HeroSection"
 import HowItWorks from "./components/home/HowItWorks"
 import ProductRange from "./components/home/ProductRange"
 import ProductsMarquee from "./components/home/ProductsMarquee"
+import Testimonials from "./components/home/Testimonials"
 import TrustedBy from "./components/home/TrustedBy"
+import WhyUs from "./components/home/WhyUs"
 
 
 const LandingPage = () => {
@@ -16,7 +18,8 @@ const LandingPage = () => {
         <ProductsMarquee/>
         <ProductRange />
         <HowItWorks />
-
+        <Testimonials />
+        <WhyUs />
         <CTABanner />
       </main>
       {/* <Hero />
