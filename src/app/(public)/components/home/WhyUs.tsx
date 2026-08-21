@@ -17,7 +17,7 @@ const pillars = [
   {
     title: "Fast Delivery",
     body: "Same-day collection from any of our 3 Lahore branches. Nationwide delivery across Pakistan. We understand food businesses can't wait.",
-    iconBoxColor: "bg-blue-950",
+    iconBoxColor: "bg-gold",
     icon: Truck,
   },
   {
@@ -35,7 +35,7 @@ const pillars = [
   {
     title: "One Supplier, Full Range",
     body: "Containers, glasses, cups, wrap and cutlery from a single order instead of five different vendors. Get your everyday packaging needs sorted in one place.",
-    iconBoxColor: "bg-gold",
+    iconBoxColor: "bg-blue-950",
     icon: Boxes,
   },
   {

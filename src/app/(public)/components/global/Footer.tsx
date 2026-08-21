@@ -80,14 +80,14 @@ const Footer = () => {
             <FooterLinkGroup key={group} title={group} links={links} />
           ))}
 
-          <div>
+          <div className="col-span-2 lg:col-span-1">
             <h4 className="mb-4 text-sm font-semibold text-onyx">Get in Touch</h4>
             <ul className="space-y-3 mb-4">
               {contactInfo.map((item) => (
                 <ContactRow key={item.text} {...item} />
               ))}
             </ul>
-            <p className="text-sm text-charcoal">Chowk Mohlanwal, Defence & Multan Road - Lahore</p>
+            <p className="text-sm text-charcoal">Near Abdullah Mobile, Chowk Mohlanwal, Multan Road - Lahore</p>
           </div>
         </div>
 
