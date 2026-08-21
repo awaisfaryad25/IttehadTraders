@@ -9,8 +9,8 @@ const featured = [
   { name: "Fast Food Box", meta: "F1 – F4", category: "Fast Food" },
   { name: "Coffee Cup", meta: "6oz / 8oz", category: "Cups" },
   { name: "Shopping Bag", meta: "Standard", category: "Bags & Wrap" },
-  { name: "Shopping Bag", meta: "Standard", category: "Bags & Wrap" },
-  { name: "Shopping Bag", meta: "Standard", category: "Bags & Wrap" },
+  { name: "Cling Film", meta: "30cm / 45cm", category: "Bags & Wrap" },
+  { name: "Aluminum Foil", meta: "30cm / 45cm", category: "Bags & Wrap" },
 ];
 
 const FeaturedProducts = () => {
