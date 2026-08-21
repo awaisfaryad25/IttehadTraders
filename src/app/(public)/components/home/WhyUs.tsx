@@ -66,7 +66,7 @@ const WhyUs = () => {
           </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid grid-cols-1 gap-5 lg:gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {pillars.map((p) => (
             <div key={p.title} className="relative bg-white p-4 md:p-6 rounded-2xl text-start border border-gold/30 shadow hover:shadow-xl hover:-translate-y-2 transition-all duration-300 ease-in-out">
               <div className="flex items-center justify-between gap-4">

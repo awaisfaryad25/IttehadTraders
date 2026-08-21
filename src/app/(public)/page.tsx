@@ -18,6 +18,7 @@ const LandingPage = () => {
         <ProductsMarquee/>
         <ProductRange />
         <HowItWorks />
+        
         <Testimonials />
         <WhyUs />
         <CTABanner />

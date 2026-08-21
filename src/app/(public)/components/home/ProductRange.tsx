@@ -95,7 +95,7 @@ const ProductRange = () => {
           ))}
         </div> */}
 
-        <div className="mt-12 2xl:mt-16 grid md:grid-cols-2 lg:grid-cols-7 grid-rows-2 gap-4 lg:gap-6">
+        <div className="mt-12 2xl:mt-16 grid md:grid-cols-2 lg:grid-cols-7 grid-rows-2 gap-5 lg:gap-6">
           <BentoImageCard
             image={CraftItems}
             alt="Karahi containers and takeaway boxes"
