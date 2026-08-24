@@ -13,6 +13,11 @@ export { default as AluminumTray } from "./home/aluminum-tray.png";
 export { default as FoodPacks } from "./home/food-pack.png";
 export { default as PlasticBoxs } from "./home/plastic-boxs.png";
 
-// 
+// Products
 export { default as CraftItems } from "./products/craft-item.png";
+export { default as PlasticBoxes } from "./products/plastic-boxes.png";
+export { default as Cutlery } from "./products/cutlery.png";
+export { default as GlassAndCups } from "./products/glassAndCups.png";
+export { default as Straws } from "./products/straws.png";
+export { default as AluminumFoil } from "./products/aluminum-foil.png";
 

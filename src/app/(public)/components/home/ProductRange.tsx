@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { categories } from "@/lib/products";
 import Image, { StaticImageData } from "next/image";
-import { CraftItems, } from "@/assets";
+import { AluminumFoil, CraftItems, Cutlery, GlassAndCups, PlasticBoxes, Straws, } from "@/assets";
 import { ArrowUpRight, } from "lucide-react";
 
 const totalVariants = categories.reduce(
@@ -97,16 +97,16 @@ const ProductRange = () => {
 
         <div className="mt-12 2xl:mt-16 grid md:grid-cols-2 lg:grid-cols-7 grid-rows-2 gap-5 lg:gap-6">
           <BentoImageCard
-            image={CraftItems}
-            alt="Karahi containers and takeaway boxes"
-            title="Karahi Containers"
+            image={PlasticBoxes}
+            alt="Plastic containers and takeaway boxes"
+            title="Plastic Containers"
             count={variantCount("containers")}
             href="/products#containers"
             className="lg:col-span-2 min-h-72"
           />
 
           <BentoImageCard
-            image={CraftItems}
+            image={AluminumFoil}
             alt="Karahi containers and takeaway boxes"
             title="Aluminium Foil"
             count={variantCount("containers")}
@@ -115,7 +115,7 @@ const ProductRange = () => {
           />
 
           <BentoImageCard
-            image={CraftItems}
+            image={GlassAndCups}
             alt="Disposable glasses and cups"
             title="Glasses & Cups"
             count={variantCount("glasses") + variantCount("cups")}
@@ -124,18 +124,18 @@ const ProductRange = () => {
           />
 
           <BentoImageCard
-            image={CraftItems}
+            image={Straws}
             alt="Thermopol boxes and biryani packs"
-            title="Thermopol Items"
+            title="Straws"
             count={variantCount("thermopol")}
             href="/products#thermopol"
             className="lg:col-span-2 lg:col-start-6 lg:row-start-1 min-h-60"
           />
 
           <BentoImageCard
-            image={CraftItems}
+            image={Cutlery}
             alt="Bags, wrap and cutlery"
-            title="Bags & Cutlery"
+            title="Cutlery"
             count={variantCount("bags-wrap") + variantCount("cutlery-tissue")}
             href="/products#bags-wrap"
             className="lg:col-span-2 lg:col-start-6lg: row-start-2 min-h-60"
