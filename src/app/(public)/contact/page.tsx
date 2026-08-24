@@ -1,5 +1,6 @@
 import { Mail, Phone, MessageSquareMore } from "lucide-react";
 import ContactForm from "../components/contact/ContactForm";
+import PageHero from "../components/global/PageHero";
 // import PageHero from "../components/global/PageHero";
 // import { ContactHero } from "@/assets";
 
@@ -15,6 +16,12 @@ const page = () => {
 
   return (
     <main className="bg-background text-foreground">
+      <PageHero
+        title="Let's Get Your Order Moving"
+        highlight="Moving"
+        description="Reach out on WhatsApp, call, or send a written inquiry — we'll get back to you the same day."
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Contact" }]}
+      />
       <section className="bg-whit px-6 py-8 md:py-12 lg:px-8">
         <div className="mx-auto w-full max-w-7xl grid gap-12 md:grid-cols-2">
           <div className="space-y-4 4xl:space-y-5">

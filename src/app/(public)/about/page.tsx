@@ -1,8 +1,15 @@
 import React from "react";
+import PageHero from "../components/global/PageHero";
 
 const page = () => {
   return (
     <main className="bg-background text-foreground">
+      <PageHero
+  title="Built to Keep Your Kitchen Stocked"
+  highlight="Stocked"
+  description="A closer look at Ittehad Traderz — who we are and how we supply disposable packaging across Lahore."
+  breadcrumbs={[{ label: "Home", href: "/" }, { label: "About" }]}
+/>
       <section className="min-h-[80vh] h-full px-6">
         <div className="flex flex-col items-center justify-center gap-6 min-h-[80vh] text-center">
           <h1 className="text-4xl font-bold text-[#FFBB5C]">🚀 Coming Soon</h1>

@@ -43,8 +43,8 @@ const ContactForm = () => {
               />
             </div>
             <Input
-              label="Number"
-              type="number"
+              label="Phone No"
+              type="tel"
               placeholder="+92123456789"
               leftIcon={<Phone className="size-4" />}
               required
