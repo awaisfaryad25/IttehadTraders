@@ -1,8 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { Loader2, CheckCircle2, Mail, User,} from "lucide-react";
-// import Input from "@/app/ui/Input";
+import { Loader2, CheckCircle2, Mail, User, Phone,} from "lucide-react";
+import Input from "@/app/ui/Input";
+
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/your-form-id";
+
 
 const ContactForm = () => {
   const [loading, setLoading] = useState(false);
@@ -22,48 +25,30 @@ const ContactForm = () => {
     <div>
       <div className="rounded-2xl border border-border bg-background p-6">
         {!done ? (
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form action={FORMSPREE_ENDPOINT} onSubmit={handleSubmit} className="space-y-4">
             <div className="grid gap-4 sm:grid-cols-2">
-              {/* <Input
+              <Input
                 label="First Name"
                 type="text"
                 placeholder="Awais Faryad"
                 leftIcon={<User className="size-4" />}
                 required
-              /> */}
-              {/* <Input
+              />
+              <Input
                 label="Last Name"
                 type="text"
                 placeholder="Awais Faryad"
                 leftIcon={<User className="size-4" />}
                 required
-              /> */}
+              />
             </div>
-            {/* <Input
-              label="Email"
-              type="email"
-              placeholder="you@example.com"
-              leftIcon={<Mail className="size-4" />}
+            <Input
+              label="Number"
+              type="number"
+              placeholder="+92123456789"
+              leftIcon={<Phone className="size-4" />}
               required
-            /> */}
-            <div>
-              <label
-                htmlFor="topic"
-                className="mb-1.5 block text-sm font-medium text-foreground"
-              >
-                Topic
-              </label>
-              <select
-                id="topic"
-                className="w-full rounded-lg border border-border bg-background px-3 py-2.5 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-1"
-              >
-                <option>General enquiry</option>
-                <option>Support</option>
-                <option>Billing</option>
-                <option>Partnership</option>
-                <option>Other</option>
-              </select>
-            </div>
+            />
 
             <div>
               <label
@@ -84,7 +69,7 @@ const ContactForm = () => {
             <button
               type="submit"
               disabled={loading}
-              className="gradient flex w-full items-center justify-center gap-2 rounded-lg py-2.5 text-sm font-medium text-white transition-colors hover:bg-secondary disabled:opacity-60"
+              className="bg-gold flex w-full items-center justify-center gap-2 rounded-lg py-2.5 text-sm font-medium text-white transition-colors hover:bg-secondary disabled:opacity-60"
             >
               {loading && <Loader2 className="h-4 w-4 animate-spin" />}
               Send message
