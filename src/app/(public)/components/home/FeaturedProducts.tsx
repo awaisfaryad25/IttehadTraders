@@ -1,6 +1,6 @@
 import { ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
-import React from 'react'
+import { DomGlass,  } from "@/assets";
 
 const featured = [
   { name: "Karahi Container", meta: "500ml – 3000ml", category: "Containers" },

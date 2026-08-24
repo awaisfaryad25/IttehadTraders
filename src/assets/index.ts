@@ -7,11 +7,14 @@ export { default as LogoIT } from "./logo/LogoIT.svg";
 
 
 // Home
-export { default as DomGlass } from "./home/dom-glass.png";
 export { default as GlassCup } from "./home/glass-cup.png";
 export { default as AluminumTray } from "./home/aluminum-tray.png";
 export { default as FoodPacks } from "./home/food-pack.png";
 export { default as PlasticBoxs } from "./home/plastic-boxs.png";
+
+// Items
+export { default as DomGlass } from "./items/dom-glass.png";
+export { default as CoffeeCup } from "./items/coffee-cup.png";
 
 // Products
 export { default as CraftItems } from "./products/craft-item.png";
