@@ -26,12 +26,6 @@ const LandingPage = () => {
         <WhyUs />
         <CTABanner />
       </main>
-      {/* <Hero />
-      <FeaturedProducts />
-      <Solutions />
-      <Testimonials />
-      <WhyUs />
-      <BlogAndCta /> */}
     </>
   )
 }
