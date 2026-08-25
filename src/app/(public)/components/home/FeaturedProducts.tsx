@@ -1,16 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
-import {
-  DomGlass12OZ,
-  Aluminum2Foil,
-  Bowl16OZ,
-  Box1500ml,
-  CofeeCupBrown,
-  PaperCoatedGlass,
-  TeaCup,
-  UmbrellaStraw,
-} from "@/assets";
+import { DomGlass12OZ, Aluminum2Foil, Bowl16OZ, Box1500ml, CofeeCupBrown, PaperCoatedGlass, TeaCup, UmbrellaStraw, } from "@/assets";
 
 type FeaturedProduct = {
   name: string;

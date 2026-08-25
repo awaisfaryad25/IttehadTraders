@@ -35,7 +35,7 @@ const PageHero = ({
       <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-onyx/5 blur-3xl" />
       <div className="pointer-events-none absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-gold/10 blur-3xl" />
 
-      <div className="relative mx-auto max-w-7xl px-6 py-16  lg:px-8 lg:py-20 2xl:px-0">
+      <div className="relative mx-auto max-w-7xl px-6 py-8 md:py-16  lg:px-8 lg:py-20 2xl:px-0">
         <nav aria-label="Breadcrumb" className="mt-6 flex">
           <ol className="flex items-center gap-1.5 font-text text-xs text-stone">
             {breadcrumbs.map((crumb, i) => (
@@ -61,7 +61,7 @@ const PageHero = ({
           </span>
         </div> */}
 
-        <h1 className="mt-6 max-w-md font-heading text-3xl font-bold leading-[1.15] tracking-tight text-onyx md:text-5xl">
+        <h1 className="mt-3 lg:mt-6 max-w-60 lg:max-w-md font-heading text-2xl font-bold leading-[1.15] tracking-tight text-onyx md:text-5xl">
           {renderTitle(title, highlight)}
         </h1>
 
