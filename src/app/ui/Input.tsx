@@ -60,9 +60,9 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             }
             className={cn(
               // base
-              "w-full rounded-lg border bg-background text-sm text-text placeholder:text-muted-foreground",
+              "w-full rounded-lg border border-gold/40 bg-background text-sm text-text placeholder:text-muted-foreground",
               "px-3 py-2.5 2xl:px-4 transition-colors outline-none",
-              "focus:ring-2 focus:ring-offset-1",
+              "focus:ring-2 focus:ring-gold",
               leftIcon && "pl-9 2xl:pl-10",
               rightIcon && "pr-9",
               !error && " focus:ring-gray-300",

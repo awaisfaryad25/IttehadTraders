@@ -1,17 +1,16 @@
-import { Mail, Phone, MessageSquareMore } from "lucide-react";
+import { Mail, Phone, MessageSquareMore, MapPinned } from "lucide-react";
 import ContactForm from "../components/contact/ContactForm";
 import PageHero from "../components/global/PageHero";
-// import PageHero from "../components/global/PageHero";
-// import { ContactHero } from "@/assets";
 
 export const metadata = { title: "Contact — Ittehad Traderz" };
 
 const page = () => {
 
   const contactDetails = [
-    { icon: Mail, title: 'Email', value: 'info@devcollab.com', href: 'mailto:info@devcollab.com' },
+    { icon: Mail, title: 'Email', value: 'ittehadtraders1@gmail.com', href: 'mailto:ittehadtraders1@gmail.com' },
     { icon: Phone, title: 'Phone', value: '+923012525017', href: 'tel:+923012525017' },
     { icon: MessageSquareMore, title: 'WhatsApp', value: '+923012525017', href: 'tel:+923012525017' },
+    { icon: MapPinned, title: 'Shop/Office', value: 'Near Abdullah Mobile, Chowk Mohlanwal, Multan Road - Lahore', href: 'tel:+923012525017' },
   ]
 
   return (

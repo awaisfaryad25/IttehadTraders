@@ -23,27 +23,27 @@ const ContactForm = () => {
 
   return (
     <div>
-      <div className="rounded-2xl border border-border bg-background p-6">
+      <div className="rounded-2xl border border-gold/40 bg-white p-6 shadow">
         {!done ? (
           <form action={FORMSPREE_ENDPOINT} onSubmit={handleSubmit} className="space-y-4">
             <div className="grid gap-4 sm:grid-cols-2">
               <Input
                 label="First Name"
                 type="text"
-                placeholder="Awais Faryad"
+                placeholder="Awais"
                 leftIcon={<User className="size-4" />}
                 required
               />
               <Input
                 label="Last Name"
                 type="text"
-                placeholder="Awais Faryad"
+                placeholder="Faryad"
                 leftIcon={<User className="size-4" />}
                 required
               />
             </div>
             <Input
-              label="Phone No"
+              label="Phone / WhatsApp"
               type="tel"
               placeholder="+92123456789"
               leftIcon={<Phone className="size-4" />}
@@ -55,14 +55,14 @@ const ContactForm = () => {
                 htmlFor="message"
                 className="mb-1.5 block text-sm font-medium text-foreground"
               >
-                Message
+                What do you need?
               </label>
               <textarea
                 id="message"
                 required
                 rows={4}
-                placeholder="Tell us what's on your mind..."
-                className="w-full rounded-lg border border-border bg-background px-3 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-1 resize-none"
+                placeholder="i.e I need 200 pcs 750ml boxes, 2 packs of coffee cups, 2 aluminum foil rolls and 1 food wrap roll."
+                className="w-full rounded-lg border border-gold/40 bg-background px-3 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-1 resize-none"
               />
             </div>
 
