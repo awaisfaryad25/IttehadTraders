@@ -1,8 +1,17 @@
 import React from 'react'
+import PageHero from '../components/global/PageHero'
 
 const page = () => {
   return (
     <main className="bg-background text-foreground">
+
+      <PageHero
+        title="Notes for Running a Leaner Kitchen"
+        highlight="Leaner"
+        description="Guides on packaging choices, regulation, and cutting waste — for food businesses across Pakistan."
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Blog" }]}
+      />
+
       <section className="min-h-[80vh] h-full px-6">
         <div className="flex flex-col items-center justify-center gap-6 min-h-[80vh] text-center">
           <h1 className="text-4xl font-bold text-[#FFBB5C]">🚀 Coming Soon</h1>
