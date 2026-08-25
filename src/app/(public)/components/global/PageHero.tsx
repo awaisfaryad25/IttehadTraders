@@ -39,7 +39,7 @@ const PageHero = ({
         <nav aria-label="Breadcrumb" className="mt-6 flex">
           <ol className="flex items-center gap-1.5 font-text text-xs text-stone">
             {breadcrumbs.map((crumb, i) => (
-              <li key={crumb.label} className="flex items-center gap-1.5">
+              <li key={crumb.label} className="flex items-center gap-1.5 font-medium">
                 {crumb.href ? (
                   <Link href={crumb.href} className="hover:text-gold">
                     {crumb.label}
