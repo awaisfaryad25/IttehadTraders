@@ -1,5 +1,6 @@
 import React from 'react'
 import PageHero from '../components/global/PageHero'
+import ProductsCatalog from '../components/products/ProductsCatalog'
 
 const page = () => {
   return (
@@ -12,6 +13,7 @@ const page = () => {
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Catalog" }]}
       />
 
+      <ProductsCatalog />
       <section className="bg-whit px-6 py-8 md:py-12 lg:px-8">
         <div className="mx-auto w-full max-w-7xl">
         </div>
