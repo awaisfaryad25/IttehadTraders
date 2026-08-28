@@ -65,7 +65,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
               "focus:ring-2 focus:ring-gold",
               leftIcon && "pl-9 2xl:pl-10",
               rightIcon && "pr-9",
-              !error && " focus:ring-gray-300",
+              !error && " focus:ring-gold focus:ring-offset-1",
               error && "border-danger focus:ring-danger",
               // disabled state
               disabled && "cursor-not-allowed opacity-50",

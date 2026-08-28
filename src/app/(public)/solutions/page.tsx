@@ -7,6 +7,7 @@ import {
   UtensilsCrossed, Coffee, ChefHat, PartyPopper, Cookie, CupSoda, Building2, Store, ShoppingBasket, Briefcase, Moon, Heart,
   Gift, Cake, Sun, Trophy, GraduationCap, Users, Sparkles, type LucideIcon,
 } from "lucide-react";
+import CTABanner from "../components/home/CTABanner";
 
 type SolutionItem = { icon: LucideIcon; title: string; body: string };
 
@@ -54,7 +55,7 @@ const page = () => {
         <div className=" flex w-fit justify-center gap-2">
           <button
             onClick={() => setTab("business")}
-            className={` px-5 py-3.5 font-text text-sm font-semibold transition-colors ${
+            className={` px-5 py-3.5 font-text text-sm font-semibold transition-colors cursor-pointer ${
               tab === "business" ? "border-b-2 border-gold bg-white text-gold" : "bg-surfacealt text-stone hover:bg-hairline/40"
             }`}
           >
@@ -62,7 +63,7 @@ const page = () => {
           </button>
           <button
             onClick={() => setTab("occasions")}
-            className={`px-5 py-3.5 font-text text-sm font-semibold transition-colors ${
+            className={`px-5 py-3.5 font-text text-sm font-semibold transition-colors cursor-pointer ${
               tab === "occasions" ? "border-b-2 border-gold bg-white text-gold" : "bg-surfacealt text-stone hover:bg-hairline/40"
             }`}
           >
@@ -71,9 +72,9 @@ const page = () => {
         </div>
         </div>
       </section>
-      <section className="bg-white px-6 lg:px-8 py-8 ">
+      <section className="bg-white px-6 lg:px-8 py-8 md:py-12 lg:py-16">
         <div className="mx-auto w-full max-w-7xl">
-        <div className="mt-16 grid grid-cols-1 gap-5 md:grid-cols-3 lg:grid-cols-4 lg:gap-6">
+        <div className=" grid grid-cols-1 gap-5 md:grid-cols-3 lg:grid-cols-4 lg:gap-6">
           {items.map((item) => (
             <div
               key={item.title}
@@ -98,10 +99,11 @@ const page = () => {
         </div>
       </section>
 
-      <section className="bg-whit px-6 py-8 md:py-12 lg:px-8">
+      <CTABanner/>
+      {/* <section className="bg-whit px-6 py-8 md:py-12 lg:px-8">
         <div className="mx-auto w-full max-w-7xl">
         </div>
-      </section>
+      </section> */}
     </main>
   )
 }
