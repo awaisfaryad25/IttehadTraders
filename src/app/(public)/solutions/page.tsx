@@ -49,13 +49,13 @@ const page = () => {
         description="Solutions sorted by business type and occasion — find exactly what your kitchen needs."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Solutions" }]}
       />
-      <section className="bg-white px-6 lg:px-8 py-b md:pb-12">
+      <section className="relative bg-white px-6 lg:px-8 shadow">
         <div className="mx-auto w-full max-w-7xl">
         <div className=" flex w-fit justify-center gap-2">
           <button
             onClick={() => setTab("business")}
             className={` px-5 py-3.5 font-text text-sm font-semibold transition-colors ${
-              tab === "business" ? "border-b-1 border-gold bg-white text-gold" : "bg-surfacealt text-stone hover:bg-hairline/40"
+              tab === "business" ? "border-b-2 border-gold bg-white text-gold" : "bg-surfacealt text-stone hover:bg-hairline/40"
             }`}
           >
             Business Types
@@ -63,12 +63,16 @@ const page = () => {
           <button
             onClick={() => setTab("occasions")}
             className={`px-5 py-3.5 font-text text-sm font-semibold transition-colors ${
-              tab === "occasions" ? "border-b-1 border-gold bg-white text-gold" : "bg-surfacealt text-stone hover:bg-hairline/40"
+              tab === "occasions" ? "border-b-2 border-gold bg-white text-gold" : "bg-surfacealt text-stone hover:bg-hairline/40"
             }`}
           >
             Occasions
           </button>
         </div>
+        </div>
+      </section>
+      <section className="bg-white px-6 lg:px-8 py-8 ">
+        <div className="mx-auto w-full max-w-7xl">
         <div className="mt-16 grid grid-cols-1 gap-5 md:grid-cols-3 lg:grid-cols-4 lg:gap-6">
           {items.map((item) => (
             <div
