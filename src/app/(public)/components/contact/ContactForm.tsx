@@ -66,7 +66,7 @@ const ContactForm = () => {
               />
             </div>
 
-            <button
+            <button         
               type="submit"
               disabled={loading}
               className="bg-gold flex w-full items-center justify-center gap-2 rounded-lg py-2.5 text-sm font-medium text-white transition-colors hover:bg-secondary disabled:opacity-60 cursor-pointer"
