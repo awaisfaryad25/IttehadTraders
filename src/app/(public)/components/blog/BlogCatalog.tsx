@@ -104,10 +104,16 @@ const BlogCatalog = () => {
           ))}
         </div>
 
-        <p className="mt-6 font-text text-sm text-stone">
-          Showing <span className="font-medium text-onyx">{filtered.length}</span>{" "}
-          {filtered.length === 1 ? "post" : "posts"}
-        </p>
+        <div className="mt-6 flex items-center gap-4">
+          <h3 className="font-heading text-lg 2xl:text-2xl font-bold text-gold">
+            All Articles
+          </h3>
+          <p className="font-text text-sm text-stone">
+            Showing <span className="font-medium text-onyx">{filtered.length}</span>{" "}
+            {filtered.length === 1 ? "post" : "posts"}
+          </p>
+          <div className="h-px flex-1 bg-hairline" />
+        </div>
 
         {filtered.length > 0 ? (
           <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -171,9 +177,9 @@ function TabChip({
   return (
     <button
       onClick={onClick}
-      className={`rounded-full border px-4 py-2 font-text text-sm font-medium transition-colors ${
+      className={`rounded-full border px-4 py-1 2xl:py-1.5 font-text text-sm font-medium transition-colors ${
         active
-          ? "border-onyx bg-onyx text-white"
+          ? "border-gold bg-gold text-white"
           : "border-hairline bg-white text-charcoal hover:border-gold"
       }`}
     >
