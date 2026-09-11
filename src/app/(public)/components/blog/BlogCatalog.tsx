@@ -1,8 +1,8 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import Link from "next/link";
-import { ArrowUpRight, Calendar } from "lucide-react";
+import { ArrowUpRight, Calendar, ChevronLeft, ChevronRight } from "lucide-react";
 
 type BlogCategory =
   | "Market Analysis"
@@ -85,67 +85,137 @@ const categories: BlogCategory[] = [
   "Pakistan Market",
 ];
 
+const POSTS_PER_PAGE = 3;
+
 const BlogCatalog = () => {
   const [active, setActive] = useState<"All" | BlogCategory>("All");
+  const [page, setPage] = useState(1);
 
   const filtered = useMemo(
     () => (active === "All" ? posts : posts.filter((p) => p.category === active)),
     [active]
   );
 
+  const totalPages = Math.max(1, Math.ceil(filtered.length / POSTS_PER_PAGE));
+
+  const paginated = useMemo(() => {
+    const start = (page - 1) * POSTS_PER_PAGE;
+    return filtered.slice(start, start + POSTS_PER_PAGE);
+  }, [filtered, page]);
+
+  // Reset to page 1 whenever the category changes so you never land on
+  // an empty/out-of-range page after switching filters.
+  useEffect(() => {
+    setPage(1);
+  }, [active]);
+
+  function goToPage(p: number) {
+    setPage(p);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
   return (
     <section className="bg-white px-6 py-8 md:py-12 lg:px-8">
       <div className="mx-auto w-full max-w-7xl">
         {/* Category tabs */}
         <div className="flex flex-wrap gap-2">
-          <TabChip label="All" active={active === "All"} onClick={() => setActive("All")} />
+          <TabChip
+            label="All"
+            active={active === "All"}
+            onClick={() => setActive("All")}
+          />
           {categories.map((c) => (
-            <TabChip key={c} label={c} active={active === c} onClick={() => setActive(c)} />
+            <TabChip
+              key={c}
+              label={c}
+              active={active === c}
+              onClick={() => setActive(c)}
+            />
           ))}
         </div>
 
         <div className="mt-6 flex items-center gap-4">
-          <h3 className="font-heading text-lg 2xl:text-2xl font-bold text-gold">
+          <h3 className="font-heading text-lg font-bold text-gold 2xl:text-2xl">
             All Articles
           </h3>
           <p className="font-text text-sm text-stone">
-            Showing <span className="font-medium text-onyx">{filtered.length}</span>{" "}
+            Showing{" "}
+            <span className="font-medium text-onyx">{filtered.length}</span>{" "}
             {filtered.length === 1 ? "post" : "posts"}
           </p>
           <div className="h-px flex-1 bg-hairline" />
         </div>
 
-        {filtered.length > 0 ? (
-          <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {filtered.map((post) => (
-              <Link
-                key={post.slug}
-                href={`/blog/${post.slug}`}
-                className="group flex flex-col rounded-2xl border border-hairline bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-              >
-                <span className="w-fit rounded-full bg-ivory px-3 py-1 font-text text-[11px] font-semibold uppercase tracking-wide text-onyx">
-                  {post.category}
-                </span>
-
-                <h3 className="mt-4 font-heading text-lg font-bold leading-snug text-onyx">
-                  {post.title}
-                </h3>
-                <p className="mt-2 flex-1 font-text text-sm leading-relaxed text-stone">
-                  {post.excerpt}
-                </p>
-
-                <div className="mt-5 flex items-center justify-between border-t border-hairline pt-4">
-                  <span className="flex items-center gap-1.5 font-text text-xs text-stone">
-                    <Calendar className="size-3.5" />
-                    {post.date} · {post.readTime}
+        {paginated.length > 0 ? (
+          <>
+            <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {paginated.map((post) => (
+                <Link
+                  key={post.slug}
+                  href={`/blog/${post.slug}`}
+                  className="group flex flex-col rounded-2xl border border-hairline bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                >
+                  <span className="w-fit rounded-full bg-ivory px-3 py-1 font-text text-[11px] font-semibold uppercase tracking-wide text-onyx">
+                    {post.category}
                   </span>
-                  <span className="flex size-7 items-center justify-center rounded-full bg-ivory text-onyx transition-all duration-300 group-hover:rotate-45 group-hover:bg-gold group-hover:text-white">
-                    <ArrowUpRight className="size-4" />
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </div>
+
+                  <h3 className="mt-4 font-heading text-lg font-bold leading-snug text-onyx">
+                    {post.title}
+                  </h3>
+                  <p className="mt-2 flex-1 font-text text-sm leading-relaxed text-stone">
+                    {post.excerpt}
+                  </p>
+
+                  <div className="mt-5 flex items-center justify-between border-t border-hairline pt-4">
+                    <span className="flex items-center gap-1.5 font-text text-xs text-stone">
+                      <Calendar className="size-3.5" />
+                      {post.date} · {post.readTime}
+                    </span>
+                    <span className="flex size-7 items-center justify-center rounded-full bg-ivory text-onyx transition-all duration-300 group-hover:rotate-45 group-hover:bg-gold group-hover:text-white">
+                      <ArrowUpRight className="size-4" />
+                    </span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+
+            {totalPages > 1 && (
+              <div className="mt-10 flex items-center justify-center gap-2">
+                <button
+                  onClick={() => goToPage(Math.max(1, page - 1))}
+                  disabled={page === 1}
+                  aria-label="Previous page"
+                  className="flex size-9 items-center justify-center rounded-full border border-hairline text-onyx transition-colors hover:border-gold disabled:cursor-not-allowed disabled:opacity-40"
+                >
+                  <ChevronLeft className="size-4" />
+                </button>
+
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
+                  <button
+                    key={p}
+                    onClick={() => goToPage(p)}
+                    aria-current={p === page ? "page" : undefined}
+                    className={`flex size-9 items-center justify-center rounded-full font-text text-sm font-medium transition-colors ${
+                      p === page
+                        ? "bg-gold text-white"
+                        : "border border-hairline text-charcoal hover:border-gold"
+                    }`}
+                  >
+                    {p}
+                  </button>
+                ))}
+
+                <button
+                  onClick={() => goToPage(Math.min(totalPages, page + 1))}
+                  disabled={page === totalPages}
+                  aria-label="Next page"
+                  className="flex size-9 items-center justify-center rounded-full border border-hairline text-onyx transition-colors hover:border-gold disabled:cursor-not-allowed disabled:opacity-40"
+                >
+                  <ChevronRight className="size-4" />
+                </button>
+              </div>
+            )}
+          </>
         ) : (
           <div className="py-16 text-center">
             <p className="font-heading text-lg font-bold text-onyx">
@@ -159,11 +229,9 @@ const BlogCatalog = () => {
       </div>
     </section>
   );
-}
+};
 
-export default BlogCatalog
-
-
+export default BlogCatalog;
 
 function TabChip({
   label,
@@ -177,7 +245,7 @@ function TabChip({
   return (
     <button
       onClick={onClick}
-      className={`rounded-full border px-4 py-1 2xl:py-1.5 font-text text-sm font-medium transition-colors ${
+      className={`rounded-full border px-4 py-1 font-text text-sm font-medium transition-colors 2xl:py-1.5 ${
         active
           ? "border-gold bg-gold text-white"
           : "border-hairline bg-white text-charcoal hover:border-gold"
