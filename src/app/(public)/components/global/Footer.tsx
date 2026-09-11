@@ -13,7 +13,7 @@ const footerLinks: Record<string, FooterLink[]> = {
     { label: "About", href: "/about" },
     { label: "Blogs", href: "/blog" },
     { label: "Products", href: "/products" },
-    { label: "Solutions", href: "/#solutions" },
+    { label: "Solutions", href: "/solutions" },
     { label: "Contact", href: "/contact" },
   ],
   Products: [
