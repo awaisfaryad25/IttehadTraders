@@ -25,8 +25,7 @@ const posts: BlogPost[] = [
   {
     slug: "karahi-container-size-guide",
     title: "Choosing the right container size for your karahi orders",
-    excerpt:
-      "A quick guide to matching container sizes to portion sizes, so you're not overpaying for capacity you don't use.",
+    excerpt: "A quick guide to matching container sizes to portion sizes, so you're not overpaying for capacity you don't use.",
     category: "Business Guide",
     date: "TBD",
     readTime: "4 min read",
@@ -34,8 +33,7 @@ const posts: BlogPost[] = [
   {
     slug: "pakistan-packaging-regulations",
     title: "What Pakistan's food packaging rules mean for your business",
-    excerpt:
-      "An overview of current regulatory expectations around food-grade packaging and what to check before you stock up.",
+    excerpt: "An overview of current regulatory expectations around food-grade packaging and what to check before you stock up.",
     category: "Pakistan Market",
     date: "TBD",
     readTime: "6 min read",
@@ -43,8 +41,7 @@ const posts: BlogPost[] = [
   {
     slug: "reducing-packaging-waste",
     title: "Cutting packaging waste without cutting order volume",
-    excerpt:
-      "Practical ways kitchens are trimming waste costs — right-sizing containers, batching orders, and smarter storage.",
+    excerpt: "Practical ways kitchens are trimming waste costs — right-sizing containers, batching orders, and smarter storage.",
     category: "Eco Packaging",
     date: "TBD",
     readTime: "5 min read",
@@ -52,8 +49,7 @@ const posts: BlogPost[] = [
   {
     slug: "demand-trends-2026",
     title: "What's driving packaging demand across Pakistani food businesses",
-    excerpt:
-      "A look at which categories are growing fastest and what that signals for kitchens planning ahead.",
+    excerpt: "A look at which categories are growing fastest and what that signals for kitchens planning ahead.",
     category: "Market Analysis",
     date: "TBD",
     readTime: "7 min read",
@@ -61,8 +57,7 @@ const posts: BlogPost[] = [
   {
     slug: "bagasse-vs-plastic",
     title: "Bagasse vs. plastic: what actually changes for your kitchen",
-    excerpt:
-      "Cost, durability, and customer perception — a practical comparison, not just an environmental one.",
+    excerpt: "Cost, durability, and customer perception — a practical comparison, not just an environmental one.",
     category: "Eco Packaging",
     date: "TBD",
     readTime: "5 min read",
@@ -70,8 +65,7 @@ const posts: BlogPost[] = [
   {
     slug: "bulk-ordering-checklist",
     title: "A bulk-ordering checklist for new food businesses",
-    excerpt:
-      "What to work out before you place your first wholesale packaging order — quantities, storage, and cash flow.",
+    excerpt: "What to work out before you place your first wholesale packaging order — quantities, storage, and cash flow.",
     category: "Business Guide",
     date: "TBD",
     readTime: "4 min read",
@@ -79,8 +73,7 @@ const posts: BlogPost[] = [
   {
     slug: "ramadan-demand-spike",
     title: "Why packaging demand spikes every Ramadan — and how to plan for it",
-    excerpt:
-      "A look at the seasonal order surge around Iftar and what kitchens can do to avoid running short mid-month.",
+    excerpt: "A look at the seasonal order surge around Iftar and what kitchens can do to avoid running short mid-month.",
     category: "Market Analysis",
     date: "TBD",
     readTime: "5 min read",
@@ -88,8 +81,7 @@ const posts: BlogPost[] = [
   {
     slug: "import-duty-packaging-costs",
     title: "How import duties are shaping local packaging prices",
-    excerpt:
-      "A plain-language look at why some packaging categories have gotten pricier in Pakistan, and what that means for wholesale buyers.",
+    excerpt: "A plain-language look at why some packaging categories have gotten pricier in Pakistan, and what that means for wholesale buyers.",
     category: "Pakistan Market",
     date: "TBD",
     readTime: "6 min read",
@@ -97,8 +89,7 @@ const posts: BlogPost[] = [
   {
     slug: "first-time-bulk-buyer-mistakes",
     title: "Common mistakes first-time bulk packaging buyers make",
-    excerpt:
-      "The most frequent ordering and storage mistakes new food businesses run into, and simple ways to avoid them.",
+    excerpt: "The most frequent ordering and storage mistakes new food businesses run into, and simple ways to avoid them.",
     category: "Business Guide",
     date: "TBD",
     readTime: "4 min read",
@@ -260,15 +251,7 @@ const BlogCatalog = () => {
 
 export default BlogCatalog;
 
-function TabChip({
-  label,
-  active,
-  onClick,
-}: {
-  label: string;
-  active: boolean;
-  onClick: () => void;
-}) {
+function TabChip({ label, active, onClick, }: { label: string; active: boolean; onClick: () => void; }) {
   return (
     <button
       onClick={onClick}
