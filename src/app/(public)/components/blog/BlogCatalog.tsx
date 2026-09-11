@@ -76,6 +76,33 @@ const posts: BlogPost[] = [
     date: "TBD",
     readTime: "4 min read",
   },
+  {
+    slug: "ramadan-demand-spike",
+    title: "Why packaging demand spikes every Ramadan — and how to plan for it",
+    excerpt:
+      "A look at the seasonal order surge around Iftar and what kitchens can do to avoid running short mid-month.",
+    category: "Market Analysis",
+    date: "TBD",
+    readTime: "5 min read",
+  },
+  {
+    slug: "import-duty-packaging-costs",
+    title: "How import duties are shaping local packaging prices",
+    excerpt:
+      "A plain-language look at why some packaging categories have gotten pricier in Pakistan, and what that means for wholesale buyers.",
+    category: "Pakistan Market",
+    date: "TBD",
+    readTime: "6 min read",
+  },
+  {
+    slug: "first-time-bulk-buyer-mistakes",
+    title: "Common mistakes first-time bulk packaging buyers make",
+    excerpt:
+      "The most frequent ordering and storage mistakes new food businesses run into, and simple ways to avoid them.",
+    category: "Business Guide",
+    date: "TBD",
+    readTime: "4 min read",
+  },
 ];
 
 const categories: BlogCategory[] = [
@@ -85,7 +112,7 @@ const categories: BlogCategory[] = [
   "Pakistan Market",
 ];
 
-const POSTS_PER_PAGE = 3;
+const POSTS_PER_PAGE = 6;
 
 const BlogCatalog = () => {
   const [active, setActive] = useState<"All" | BlogCategory>("All");
@@ -134,7 +161,7 @@ const BlogCatalog = () => {
           ))}
         </div>
 
-        <div className="mt-6 flex items-center gap-4">
+        <div className="mt-6 2xl:mt-12 flex items-center gap-4">
           <h3 className="font-heading text-lg font-bold text-gold 2xl:text-2xl">
             All Articles
           </h3>
