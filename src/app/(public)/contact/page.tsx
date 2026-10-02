@@ -39,7 +39,7 @@ const page = () => {
             <div className="space-y-4 4xl:space-y-5 text-text-body my-7">
               {contactDetails.map(({ icon: Icon, title, value, href }) => (
                 <div key={title} className="flex items-start gap-3">
-                  <Icon className="size-4.5 4xl:size-5 text-text-muted shrink-0" />
+                  <Icon className="size-4.5 4xl:size-5 text-gold shrink-0" />
                   <div className='4xl:space-y-1'>
                     <h4 className="font-bold text-sm 4xl:text-base">{title}</h4>
                     <a href={href} className="font-medium text-sm 4xl:text-base hover:text-brand-green transition-colors">
