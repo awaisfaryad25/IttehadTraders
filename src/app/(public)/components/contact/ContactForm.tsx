@@ -23,7 +23,7 @@ const ContactForm = () => {
 
   return (
     <div>
-      <div className="rounded-2xl border border-gold/40 bg-white p-6 shadow">
+      <div className="rounded-2xl border border-gold/40 bg-background p-6 shadow">
         {!done ? (
           <form action={FORMSPREE_ENDPOINT} onSubmit={handleSubmit} className="space-y-4">
             <div className="grid gap-4 sm:grid-cols-2">
@@ -62,7 +62,7 @@ const ContactForm = () => {
                 required
                 rows={4}
                 placeholder="i.e I need 200 pcs 750ml boxes, 2 packs of coffee cups, 2 aluminum foil rolls and 1 food wrap roll."
-                className="w-full rounded-lg border border-gold/40 bg-background px-3 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-1 resize-none"
+                className="w-full rounded-lg border border-gold/40 bg-white px-3 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-1 resize-none"
               />
             </div>
 

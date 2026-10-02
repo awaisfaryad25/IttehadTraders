@@ -21,10 +21,10 @@ const page = () => {
         description="Reach out on WhatsApp, call, or send a written inquiry — we'll get back to you the same day."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Contact" }]}
       />
-      <section className="bg-whit px-6 py-8 md:py-12 lg:px-8">
+      <section className="bg-white px-6 py-8 md:py-12 xl:py-16 2xl:py-24 lg:px-8">
         <div className="mx-auto w-full max-w-7xl grid gap-12 md:grid-cols-2">
           <div className="space-y-4 4xl:space-y-5">
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-crate">
+            <p className="font-mono text-xs uppercase tracking-[0.2em] text-crate text-gold">
               Contact
             </p>
             <h2 className="font-display text-xl xs:text-2xl md:text-3xl lg:text-4xl xl:text-[40px] 4xl:text-5xl font-bold leading-[1.3] text-secondary!">
