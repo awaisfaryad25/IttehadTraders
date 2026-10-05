@@ -143,7 +143,7 @@ const ProductRange = () => {
         </div>
 
         <div className="mt-12">
-          <Link href="" className="group px-6 py-3 2xl:py-3.5 text-onyx font-medium bg-gold rounded-xl flex items-center gap-2 w-fit mx-auto shadow-md hover:shadow-xl">
+          <Link href="" className="group px-6 py-3 2xl:py-3.5 text-white font-medium bg-onyx hover:bg-linear-to-r from-gold to-[#FFBB5C] rounded-xl flex items-center gap-2 w-fit mx-auto shadow-md hover:shadow-xl">
             View All Categories
             <span className=" flex size-7 items-center justify-center rounded-full p-1 transition-transform duration-300 group-hover:rotate-45 group-hover:bg-white/15">
               <ArrowUpRight className="size-4" />

@@ -75,7 +75,7 @@ const HeroSection = () => {
             <div className="mt-6 lg:mt-10 flex flex-wrap gap-4">
               <Link
                 href="/products"
-                className="rounded-lg bg-onyx px-7 py-3.5 font-text text-sm font-semibold text-white transition-colors hover:bg-linear-to-r from-gold to-[#FFBB5C]"
+                className="rounded-lg  px-7 py-3.5 font-text text-sm font-semibold text-white transition-colors bg-onyx hover:bg-linear-to-r from-gold to-[#FFBB5C]"
               >
                 Browse Catalog
               </Link>
