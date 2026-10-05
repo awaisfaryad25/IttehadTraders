@@ -76,7 +76,7 @@ const NavBar = () => {
             </button>
 
             <div className="hidden md:flex items-center space-x-2">
-              <Link href="/" className="bg-linear-to-r from-gold to-[#FFBB5C] text-white px-5 py-2.5 font-semibold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-200 flex items-center gap-2">
+              <Link href="/" className="bg-onyx hover:bg-linear-to-r from-gold to-[#FFBB5C] text-white px-5 py-2.5 font-semibold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-200 flex items-center gap-2">
                 <ShoppingBag className="size-5"/>
                 Inquiry Bag
               </Link>

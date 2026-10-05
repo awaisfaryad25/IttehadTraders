@@ -123,7 +123,7 @@ const page = () => {
           <div className="mt-12">
             <Link
               href="/contact"
-              className="group mx-auto flex w-fit items-center gap-2 rounded-xl bg-gold px-6 py-3 font-medium text-onyx shadow-md transition-shadow hover:shadow-xl 2xl:py-3.5"
+              className="group mx-auto flex w-fit items-center gap-2 rounded-xl px-6 py-3 font-medium text-white bg-onyx hover:bg-linear-to-r from-gold to-[#FFBB5C] shadow-md transition-shadow hover:shadow-xl 2xl:py-3.5"
             >
               Talk to Us
               <span className="flex size-7 items-center justify-center rounded-full p-1 transition-transform duration-300 group-hover:rotate-45 group-hover:bg-white/15">

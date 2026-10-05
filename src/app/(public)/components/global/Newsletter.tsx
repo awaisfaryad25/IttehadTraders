@@ -28,7 +28,7 @@ const Newsletter = () => {
         />
         <button
           type="submit"
-          className="flex shrink-0 items-center justify-center rounded-r-full bg-onyx px-4 py-3 font-text text-xs font-semibold text-white transition-colors hover:bg-gold md:text-sm cursor-pointer"
+          className="flex shrink-0 items-center justify-center rounded-r-full px-4 py-3 font-text text-xs font-semibold text-white transition-colors bg-onyx hover:bg-linear-to-r from-gold to-[#FFBB5C] md:text-sm cursor-pointer"
         >
           Subscribe
         </button>
