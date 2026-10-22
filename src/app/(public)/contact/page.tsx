@@ -1,4 +1,3 @@
-import { Mail, Phone, MessageSquareMore, MapPinned } from "lucide-react";
 import ContactForm from "../components/contact/ContactForm";
 import PageHero from "../components/global/PageHero";
 import ContactInfo from "../components/contact/ContactInfo";
@@ -6,13 +5,6 @@ import ContactInfo from "../components/contact/ContactInfo";
 export const metadata = { title: "Contact — Ittehad Traderz" };
 
 const page = () => {
-
-  const contactDetails = [
-    { icon: Mail, title: 'Email', value: 'ittehadtraders1@gmail.com', href: 'mailto:ittehadtraders1@gmail.com' },
-    { icon: Phone, title: 'Phone', value: '+923012525017', href: 'tel:+923012525017' },
-    { icon: MessageSquareMore, title: 'WhatsApp', value: '+923012525017', href: 'tel:+923012525017' },
-    { icon: MapPinned, title: 'Shop/Office', value: 'Near Abdullah Mobile, Chowk Mohlanwal, Multan Road - Lahore', href: 'tel:+923012525017' },
-  ]
 
   return (
     <main className="bg-background text-foreground">
@@ -37,33 +29,10 @@ const page = () => {
               Tell us what you need and we&apos;ll get back with pricing. Fastest response is via WhatsApp using the button in the corner.
             </p>
           </div>
-          <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-5">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
             <ContactForm/>
             <ContactInfo/>
-          </div>
-          
-          <div className="space-y-4 4xl:space-y-5">
-
-
-            {/* Contact Details */}
-            <div className="space-y-4 4xl:space-y-5 text-text-body my-7">
-              {contactDetails.map(({ icon: Icon, title, value, href }) => (
-                <div key={title} className="flex items-start gap-3">
-                  <Icon className="size-4.5 4xl:size-5 text-gold shrink-0" />
-                  <div className='4xl:space-y-1'>
-                    <h4 className="font-bold text-sm 4xl:text-base">{title}</h4>
-                    <a href={href} className="font-medium text-sm 4xl:text-base hover:text-brand-green transition-colors">
-                      {value}
-                    </a>
-                  </div>
-                </div>
-              ))}
-            </div>
-            
-            {/* <CalendlyButton/> */}
-          </div>
-
-          
+          </div>    
         </div>
       </section>
     </main>

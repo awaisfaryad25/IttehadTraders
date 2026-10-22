@@ -24,19 +24,20 @@ const ContactForm = () => {
   return (
     <div className="lg:col-span-3">
       <div className="rounded-2xl border border-gold/40 bg- p-6 shadow">
-        <header className="mb-6 flex items-start gap-4">
-        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-ivory text-gold">
-          <MessageCircle size={18} aria-hidden />
-        </span>
-        <div>
-          <h2 className="text-xl leading-6 font-semibold text-[#0F2236]">
-            Send a message
-          </h2>
-          <p className="mt-0.5 text-sm text-slate-500">
-            Share a few details and we&apos;ll point you in the right direction.
-          </p>
-        </div>
-      </header>
+        <header className="mb-6 lg:mb-10 flex items-start gap-4">
+          <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-ivory text-gold">
+            <MessageCircle size={18} aria-hidden />
+          </span>
+          <div>
+            <h2 className="text-xl leading-6 font-semibold text-[#0F2236]">
+              Send a message
+            </h2>
+            <p className="mt-0.5 text-sm text-slate-500">
+              Share a few details and we&apos;ll point you in the right direction.
+            </p>
+          </div>
+        </header>
+
         {!done ? (
           <form action={FORMSPREE_ENDPOINT} onSubmit={handleSubmit} className="space-y-4">
             <div className="grid gap-4 sm:grid-cols-2">
@@ -56,6 +57,13 @@ const ContactForm = () => {
               />
             </div>
             <Input
+              label="Email"
+              type="mail"
+              placeholder="info@gmail.com"
+              leftIcon={<Mail className="size-4" />}
+              required
+            />
+            <Input
               label="Phone / WhatsApp"
               type="tel"
               placeholder="+92123456789"
@@ -73,7 +81,7 @@ const ContactForm = () => {
               <textarea
                 id="message"
                 required
-                rows={4}
+                rows={6}
                 placeholder="i.e I need 200 pcs 750ml boxes, 2 packs of coffee cups, 2 aluminum foil rolls and 1 food wrap roll."
                 className="w-full rounded-lg border border-gold/40 bg-white px-3 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-1 resize-none"
               />
@@ -82,7 +90,7 @@ const ContactForm = () => {
             <button         
               type="submit"
               disabled={loading}
-              className="bg-onyx hover:bg-linear-to-r from-gold to-[#FFBB5C] flex w-full items-center justify-center gap-2 rounded-lg py-2.5 text-sm font-medium text-white transition-colors hover:bg-secondary disabled:opacity-60 cursor-pointer"
+              className="bg-onyx hover:bg-linear-to-r from-gold to-[#FFBB5C] flex w-full items-center justify-center gap-2 rounded-lg py-3 text-sm font-medium text-white transition-colors hover:bg-secondary disabled:opacity-60 cursor-pointer"
             >
               {loading && <Loader2 className="h-4 w-4 animate-spin" />}
               Send message
