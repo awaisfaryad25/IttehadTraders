@@ -12,15 +12,15 @@ const CONTACT_CARDS: {
     icon: Mail,
     title: "Email us",
     text: "We're happy to answer your questions.",
-    value: "support@homewellness.com",
-    href: "mailto:support@homewellness.com",
+    value: "ittehadtraders1@gmail.com",
+    href: "mailto:ittehadtraders1@gmail.com",
   },
   {
     icon: Phone,
     title: "Call our team",
-    text: "Mon–Fri, 9 AM – 6 PM",
-    value: "+92 300 1234567",
-    href: "tel:+923001234567",
+    text: "Mon-Fri, 9 AM - 6 PM",
+    value: "+92 301 2525017",
+    href: "tel:+923012525017",
   },
   {
     icon: Clock,
@@ -51,7 +51,7 @@ const ContactInfo
     <aside className="space-y-4 lg:col-span-2">
       {CONTACT_CARDS.map(({ icon: Icon, title, text, value, href }) => (
         <section key={title} className={`${card} flex items-center gap-4 p-5`}>
-          <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-slate-100 text-[#00236F]">
+          <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-ivory text-gold">
             <Icon size={18} aria-hidden />
           </span>
           <div className="min-w-0">
@@ -60,12 +60,12 @@ const ContactInfo
             {href ? (
               <a
                 href={href}
-                className="mt-1 block truncate text-sm font-semibold text-[#0A3396] hover:underline"
+                className="mt-1 block truncate text-sm font-semibold text-gold hover:underline"
               >
                 {value}
               </a>
             ) : (
-              <strong className="mt-1 block text-sm font-semibold text-[#0A3396]">
+              <strong className="mt-1 block text-sm font-semibold text-gold">
                 {value}
               </strong>
             )}
@@ -78,7 +78,7 @@ const ContactInfo
         <ol className="mt-4 space-y-4">
           {NEXT_STEPS.map(({ title, text }, index) => (
             <li key={title} className="flex items-start gap-3">
-              <span className="grid size-6 shrink-0 place-items-center rounded-full bg-[#2A4A5B] text-[11px] font-bold text-white">
+              <span className="grid size-6 shrink-0 place-items-center rounded-full bg-gold text-[11px] font-bold text-white">
                 {index + 1}
               </span>
               <div>
