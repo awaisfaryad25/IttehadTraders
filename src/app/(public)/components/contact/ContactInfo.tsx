@@ -42,7 +42,7 @@ const NEXT_STEPS = [
   },
 ];
 
-const card = "rounded-2xl border border-slate-200 bg-white shadow-[0_1px_3px_rgba(16,24,40,0.06)]";
+const card = "rounded-2xl border border-gold/50 bg-white shadow-[0_1px_3px_rgba(16,24,40,0.06)]";
 
 const ContactInfo
 

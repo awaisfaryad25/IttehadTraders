@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Loader2, CheckCircle2, Mail, User, Phone,} from "lucide-react";
+import { Loader2, CheckCircle2, Mail, User, Phone, MessageCircle,} from "lucide-react";
 import Input from "@/app/ui/Input";
 
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/your-form-id";
@@ -23,7 +23,20 @@ const ContactForm = () => {
 
   return (
     <div className="lg:col-span-3">
-      <div className="rounded-2xl border border-gold/40 bg-background p-6 shadow">
+      <div className="rounded-2xl border border-gold/40 bg- p-6 shadow">
+        <header className="mb-6 flex items-start gap-4">
+        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-ivory text-gold">
+          <MessageCircle size={18} aria-hidden />
+        </span>
+        <div>
+          <h2 className="text-xl leading-6 font-semibold text-[#0F2236]">
+            Send a message
+          </h2>
+          <p className="mt-0.5 text-sm text-slate-500">
+            Share a few details and we&apos;ll point you in the right direction.
+          </p>
+        </div>
+      </header>
         {!done ? (
           <form action={FORMSPREE_ENDPOINT} onSubmit={handleSubmit} className="space-y-4">
             <div className="grid gap-4 sm:grid-cols-2">
