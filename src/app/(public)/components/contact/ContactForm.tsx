@@ -22,7 +22,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div>
+    <div className="lg:col-span-3">
       <div className="rounded-2xl border border-gold/40 bg-background p-6 shadow">
         {!done ? (
           <form action={FORMSPREE_ENDPOINT} onSubmit={handleSubmit} className="space-y-4">

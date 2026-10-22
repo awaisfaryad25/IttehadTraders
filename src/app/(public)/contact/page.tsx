@@ -1,6 +1,7 @@
 import { Mail, Phone, MessageSquareMore, MapPinned } from "lucide-react";
 import ContactForm from "../components/contact/ContactForm";
 import PageHero from "../components/global/PageHero";
+import ContactInfo from "../components/contact/ContactInfo";
 
 export const metadata = { title: "Contact — Ittehad Traderz" };
 
@@ -22,7 +23,8 @@ const page = () => {
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Contact" }]}
       />
       <section className="bg-white px-6 py-8 md:py-12 xl:py-16 2xl:py-24 lg:px-8">
-        <div className="mx-auto w-full max-w-7xl grid gap-12 md:grid-cols-2">
+
+        <div className="mx-auto w-full max-w-7xl space-y-6 lg:space-y-8">
           <div className="space-y-4 4xl:space-y-5">
             <p className="font-mono text-xs uppercase tracking-[0.2em] text-crate text-gold">
               Contact
@@ -34,6 +36,14 @@ const page = () => {
             <p className="text-sm md:text-base 4xl:text-lg font-normal leading-relaxed text-text-body 4xl:max-w-2xl">
               Tell us what you need and we&apos;ll get back with pricing. Fastest response is via WhatsApp using the button in the corner.
             </p>
+          </div>
+          <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-5">
+            <ContactForm/>
+            <ContactInfo/>
+          </div>
+          
+          <div className="space-y-4 4xl:space-y-5">
+
 
             {/* Contact Details */}
             <div className="space-y-4 4xl:space-y-5 text-text-body my-7">
@@ -53,7 +63,7 @@ const page = () => {
             {/* <CalendlyButton/> */}
           </div>
 
-          <ContactForm/>
+          
         </div>
       </section>
     </main>
