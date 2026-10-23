@@ -80,8 +80,8 @@ const page = () => {
               key={item.title}
               className="group rounded-2xl border border-gold/30 bg-white p-5 text-start shadow transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl"
             >
-              <span className="flex size-11 items-center justify-center rounded-xl bg-ivory group-hover:bg-gold shadow xl:size-12 group-hover:-rotate-15">
-                <item.icon className="size-5 text-onyx group-hover:text-white xl:size-6" />
+              <span className="flex size-11 items-center justify-center rounded-xl bg-ivory shadow transition-all duration-500 ease-out group-hover:-rotate-15 group-hover:bg-gold motion-reduce:transition-none xl:size-12">
+                <item.icon className="size-5 text-onyx transition-colors duration-500 ease-out group-hover:text-white motion-reduce:transition-none xl:size-6" />
               </span>
               <h3 className="mt-4 font-heading text-base font-bold text-onyx">
                 {item.title}
