@@ -51,7 +51,7 @@ export default function LegalLayout({
 }) {
   return (
     <section className="bg-white px-6 py-12 md:py-16 lg:px-8">
-      <div className="mx-auto grid w-full max-w-6xl gap-10 lg:grid-cols-[240px_1fr] lg:gap-14">
+      <div className="mx-auto grid w-full max-w-7xl gap-10 lg:grid-cols-[240px_1fr] lg:gap-14">
         {/* Table of contents */}
         <aside className="lg:sticky lg:top-24 lg:self-start">
           <p className="font-text text-xs font-bold uppercase tracking-widest text-gold">
