@@ -25,6 +25,11 @@ const footerLinks: Record<string, FooterLink[]> = {
   ],
 };
 
+const legalLinks: FooterLink[] = [
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms of Service", href: "/terms-of-service" },
+];
+
 const contactInfo: ContactItem[] = [
   { icon: Phone, text: "+92 301 2525017", href: "tel:+923012525017" }, // TODO: real number
   { icon: Mail, text: "info@ittehadtraders.pk", href: "mailto:info@ittehadtraders.pk" }, // TODO: real email
@@ -93,6 +98,15 @@ const Footer = () => {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-hairline pt-6 text-xs text-stone sm:flex-row">
           <p>© {new Date().getFullYear()} Ittehad Traders. All rights reserved.</p>
+          <ul className="flex items-center gap-5">
+            {legalLinks.map((l) => (
+              <li key={l.label}>
+                <Link href={l.href} className="transition-colors hover:text-gold">
+                  {l.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </footer>
