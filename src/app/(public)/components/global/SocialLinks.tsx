@@ -4,7 +4,7 @@ const socialLinks = [
   { icon: FaXTwitter, href: "https://twitter.com", label: "Twitter" },
   { icon: FaGithub, href: "https://github.com", label: "GitHub" },
   { icon: FaLinkedinIn, href: "https://www.linkedin.com/company/ittehadtraderz", label: "LinkedIn" },
-  { icon: FaFacebookF, href: "https://facebook.com", label: "Facebook" },
+  { icon: FaFacebookF, href: "https://facebook.com/ittehadtraderz", label: "Facebook" },
 ];
 
 const SocialLinks = () => {
