@@ -3,8 +3,8 @@ import { FaGithub, FaLinkedinIn, FaXTwitter, FaFacebookF, } from "react-icons/fa
 const socialLinks = [
   { icon: FaXTwitter, href: "https://twitter.com", label: "Twitter" },
   { icon: FaGithub, href: "https://github.com", label: "GitHub" },
-  { icon: FaLinkedinIn, href: "https://linkedin.com", label: "LinkedIn" },
-  { icon: FaFacebookF, href: "https://facebook.com/ittehadtraderz", label: "Facebook" },
+  { icon: FaLinkedinIn, href: "https://www.linkedin.com/company/ittehadtraderz", label: "LinkedIn" },
+  { icon: FaFacebookF, href: "https://facebook.com", label: "Facebook" },
 ];
 
 const SocialLinks = () => {
