@@ -1,10 +1,11 @@
-import { FaGithub, FaLinkedinIn, FaXTwitter, FaFacebookF, } from "react-icons/fa6";
+import { FaLinkedinIn, FaXTwitter, FaFacebookF, FaInstagram, FaTiktok  } from "react-icons/fa6";
 
 const socialLinks = [
-  { icon: FaXTwitter, href: "https://twitter.com", label: "Twitter" },
-  { icon: FaGithub, href: "https://github.com", label: "GitHub" },
-  { icon: FaLinkedinIn, href: "https://www.linkedin.com/company/ittehadtraderz", label: "LinkedIn" },
   { icon: FaFacebookF, href: "https://facebook.com/ittehadtraderz", label: "Facebook" },
+  { icon: FaInstagram, href: "https://instagram.com", label: "Instagram" },
+  { icon: FaLinkedinIn, href: "https://www.linkedin.com/company/ittehadtraderz", label: "LinkedIn" },
+  { icon: FaXTwitter, href: "https://twitter.com", label: "Twitter" },
+  { icon: FaTiktok, href: "https://tiktok.com", label: "Tiktok" },
 ];
 
 const SocialLinks = () => {
